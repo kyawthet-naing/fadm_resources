@@ -1,31 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FADM</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(darkblue, black);
+        height: 100vh;
+        font: normal 10px "Courier New", "Courier", monospace;
+        position: relative;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FADM</title>
-  <style>
-    h1 {
-      text-align: center;
-    }
+      .overlay {
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: repeating-linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.3) 1px,
+          transparent 2px,
+          rgba(0, 0, 0, 0.3) 3px
+        );
+      }
 
-    p {
-      text-align: center;
-    }
+      code {
+        display: block;
+        font-size: 1.2rem;
+        color: #f1f1f1;
+        padding: 1rem;
+        filter: drop-shadow(0 0 1px #fff);
+      }
 
-    div {
-      text-align: center;
-    }
-  </style>
-</head>
+      .cursor {
+        animation: cursor-blink 300ms alternate linear infinite;
+      }
 
-<body>
+      @keyframes cursor-blink {
+        from {
+          opacity: 0;
+        }
 
-  <h1>Oops!</h1>
-  <p>This page is</p>
-  <div>Empty</div>
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
 
-</body>
-
+  <body>
+    <div id="terminal">
+      <code>
+        > Trying fadm.server...<br />
+        > Connected to fadm.server.<br />
+        > Escape character is '^]'.<br />
+        > GET / http/1.1<br />
+        > Host: fadm.server<br />
+        > HTTP/1.1 500 Internal Server Error<span class="cursor">_</span>
+      </code>
+      <div class="overlay"></div>
+    </div>
+  </body>
 </html>

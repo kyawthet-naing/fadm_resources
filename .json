@@ -1,5 +1,18 @@
 {
-  "name": "FADM",
-  "target": 2023,
-  "is_production": true
+  "svr_name": "fadmsvr",
+  "svr_id": "6766570825670067047",
+  "live_id": "2114535485742347286",
+  "live_path": "/2023/11/live",
+  "league_id": "2784130784524307656",
+  "league_path": "/2023/11/league",
+  "hgighlight_id": "8464121703012300135",
+  "hgighlight_path": "/2023/11/highlights",
+  "target_id": "6364038453955491833",
+  "target_path": "/2023/11/target",
+  "channel_id": "5089794233236631209",
+  "channel_path": "/2023/11/channel",
+  "refer_id": "8871698227808030756",
+  "refer_path": "/2023/11/refer",
+  "link_name_id": "478456885255361970",
+  "link_name_path": "/2023/11/link-name"
 }
